@@ -1,0 +1,103 @@
+:root {
+    --accent: rgb(207, 61, 195);
+    --primary: rgb(50, 46, 46);
+}
+
+::selection {
+    background: rgba(240, 180, 236, 0.596);
+}
+
+body {
+    font-size: 1.75rem;
+    line-height: 1.75;
+    display: flex;
+    flex-direction: column;
+    background: var(--primary);
+}
+
+h1, h2, h3, p {
+    color: var(--accent);
+    margin-bottom: .625rem;
+}
+
+code {
+    font-size: .625rem;
+    color:rgb(226, 235, 235);
+    user-select: all;
+}
+
+p {
+    font-size: small;
+    text-align: center;
+    
+}
+header, footer {
+    height: 15vh;
+
+    text-align: center;
+    line-height: 15vh;
+}
+
+main{
+    display: flex;
+    min-height: 70vh;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+pre {
+    
+    flex-grow: 1;
+    background: linear-gradient(rgb(120, 65, 115), rgb(149, 66, 142));
+    padding: 2%;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+}
+
+#subheader {
+    margin: 1%;
+}
+
+.card {
+    display: flex;
+    border: 2px dashed rgb(204, 183, 183);
+    width: 30%;
+    padding: 1% 2%;
+    margin: 2% 0;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s ease;
+}
+
+.card:hover, .card:hover h3 {
+    box-shadow: 0 0 10px inset rgb(141, 39, 152), 0 0 10px rgb(141, 39, 152);
+}
+
+.card > h3:hover {
+    box-shadow: 0 0 10px inset rgb(141, 39, 152), 0 0 10px rgb(141, 39, 152);
+}
+
+
+.card > h3 {
+    
+    line-height: 145%;
+    border: 2px solid rgb(204, 183, 183);
+    border-radius: 5px;
+    position: relative;
+    bottom: 25px;
+    background: var(--primary);
+    transition: all .5s ease; 
+    
+}
+@media screen and (max-width:992px){
+    .card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .card{
+        width: 90%;}
+    
+}
+ 
